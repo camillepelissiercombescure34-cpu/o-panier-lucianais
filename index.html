@@ -1,186 +1,241 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang='fr'>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="referrer" content="no-referrer">
-<meta name="description" content="Épicerie de proximité à Saint-Saturnin-de-Lucian : produits locaux, produits frais, prix justes et accueil chaleureux. 4 av. du Quai.">
-<title>O’ Panier Lucianais – Épicerie de village à Saint-Saturnin-de-Lucian</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
+<meta http-equiv='Content-Security-Policy' content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name='referrer' content='no-referrer'>
+<meta name='theme-color' content='#17211b'>
+<meta name='description' content='Épicerie de village à Saint-Saturnin-de-Lucian (Hérault) : fruits et légumes de saison, charcuteries locales, glaces l’été. Ouvert du mardi au dimanche. 4 avenue du Quai.'>
+<title>O’ Panier Lucianais – Épicerie à Saint-Saturnin-de-Lucian</title>
+<link rel='icon' href='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🧺%3C/text%3E%3C/svg%3E'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Figtree:wght@400;500;600&family=Young+Serif&display=swap'>
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"GroceryStore","name":"O’ Panier Lucianais","telephone":"+33680916372","email":"opanierlucianais@gmail.com","address":{"@type":"PostalAddress","streetAddress":"4 avenue du Quai","postalCode":"34725","addressLocality":"Saint-Saturnin-de-Lucian","addressCountry":"FR"},"openingHours":["Tu-Sa 08:00-12:30","Tu-Sa 16:00-19:30","Su 08:00-12:30"]}</script>
 <style>
-:root{--bg:#f4f3ee;--surface:#fff;--text:#262824;--muted:#64675d;--brand:#3f6b3a;--brand-text:#fff;--accent:#7a2b3f;--line:#dedcd2;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1d19;--surface:#262923;--text:#f1eee6;--muted:#a9a69b;--brand:#8fc085;--brand-text:#13200f;--accent:#e0a0b1;--line:#3a3d35;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#1b1d19;--surface:#262923;--text:#f1eee6;--muted:#a9a69b;--brand:#8fc085;--brand-text:#13200f;--accent:#e0a0b1;--line:#3a3d35;color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 Georgia,"Times New Roman",serif}
-h1,h2,h3,.btn,label,nav{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--line)}
-header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
-.logo{font:700 1.15rem system-ui,sans-serif;color:var(--brand);text-decoration:none}
-nav a{margin-left:16px;color:var(--text);text-decoration:none;font-size:.95rem}
-nav a:hover{color:var(--accent)}
-.hero{padding:56px 0 40px}
-.hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin:0 0 16px}
-.hero p{font-size:1.15rem;color:var(--muted);max-width:620px;margin:0 0 24px}
-.btn{display:inline-block;background:var(--brand);color:var(--brand-text);border:0;border-radius:999px;padding:12px 22px;font-size:1rem;font-weight:600;text-decoration:none;cursor:pointer;margin:0 8px 8px 0}
-.btn.alt{background:transparent;color:var(--text);border:2px solid var(--line)}
-.btn[disabled]{opacity:.55;cursor:not-allowed}
-.btn{min-height:44px;line-height:1.3;transition:transform 150ms ease-out,opacity 150ms ease-out}
+:root{--ink:#17211b;--stone:#f1eee6;--gold:#d9a441;--wine:#6b2437;--slate:#1e2b24;--chalk:#eef0e6;--bg:#f1eee6;--card:#faf8f3;--text:#1f2a22;--muted:#5d655a;--line:#d9d5c8;--link:#6b2437;--serif:'Young Serif',Georgia,'Times New Roman',serif;--sans:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;--hand:'Caveat','Bradley Hand','Segoe Print',cursive;color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{--bg:#111812;--card:#1a251e;--text:#eceee4;--muted:#a3ab9c;--line:#2d3a31;--link:#e8a9ba;color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:16px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 var(--sans)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;margin:0}
+h2{font-size:clamp(1.9rem,4.6vw,2.9rem);letter-spacing:-.01em;margin-bottom:18px}
+h3{font-size:1.25rem;margin-bottom:8px}
+p{margin:0 0 14px;max-width:62ch}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.hero{position:relative;background:var(--ink);color:var(--stone);overflow:hidden;background-size:cover;background-position:center}
+.land{position:absolute;inset:0;width:100%;height:100%}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,33,27,.55),rgba(23,33,27,.15) 55%,rgba(23,33,27,.55))}
+.in{position:relative;padding:14px 22px 150px;max-width:1040px;margin:0 auto}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:76px}
+.mark{font:400 1.3rem var(--serif);color:var(--stone);text-decoration:none;padding:10px 0}
+nav a{color:var(--stone);text-decoration:none;display:inline-block;padding:13px 9px;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--gold)}
+.hero h1{font-size:clamp(2.6rem,8.4vw,5.6rem);letter-spacing:-.02em;max-width:13ch;margin-bottom:22px}
+.lead{font-size:1.2rem;max-width:34em;color:#dfe2d6}
+.cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:12px;background:var(--gold);color:#1a1a10;font:600 1rem var(--sans);border:0;text-decoration:none;cursor:pointer;transition:transform 150ms ease-out,background-color 150ms ease-out,opacity 150ms ease-out}
+.btn:hover{background:#e4b457}
 .btn:active:not([disabled]){transform:scale(.97)}
-nav a{display:inline-block;padding:11px 6px}
-section>p{max-width:65ch}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-@keyframes pop{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
-.result{animation:pop 200ms ease-out;transform-origin:top left}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.result{transition:none;animation:none}}
-section{padding:36px 0;border-top:1px solid var(--line)}
-h2{font-size:1.6rem;margin:0 0 14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
-.card h3{margin:0 0 6px;font-size:1.05rem;color:var(--brand)}
-.card p{margin:0;color:var(--muted);font-size:.97rem}
-blockquote{margin:0}
-.stars{color:var(--accent);font:700 1.1rem system-ui,sans-serif}
-form{display:grid;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
-label{display:grid;gap:4px;font-size:.92rem;font-weight:600}
-input,select,textarea{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px;width:100%}
-.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.radios{display:flex;gap:18px;flex-wrap:wrap;font-family:system-ui,sans-serif}
-.radios label{display:flex;align-items:center;gap:6px;font-weight:500}
-.radios input{width:auto}
-.err{color:var(--accent);font:600 .9rem system-ui,sans-serif;min-height:1.2em}
-.result{display:none;background:var(--bg);border:1px dashed var(--brand);border-radius:12px;padding:14px;white-space:pre-wrap;word-break:break-word}
-.small{font-size:.88rem;color:var(--muted)}
-footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
-a{color:var(--accent)}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.btn.ghost:hover{background:rgba(127,127,127,.14)}
+.pill{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px;border-radius:999px;background:rgba(241,238,230,.12);border:1px solid rgba(241,238,230,.28);font-weight:600;font-size:.95rem;font-variant-numeric:tabular-nums}
+.dot{width:10px;height:10px;border-radius:50%;background:#8a8f84}
+.pill.open .dot{background:#8fd18f}
+.pill.closed .dot{background:var(--gold)}
+.rv{opacity:0;transform:translateY(14px);animation:up 450ms ease-out forwards}
+.rv.d1{animation-delay:90ms}.rv.d2{animation-delay:180ms}.rv.d3{animation-delay:270ms}
+@keyframes up{to{opacity:1;transform:none}}
+section{padding:76px 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center}
+.slate{background:var(--slate);color:var(--chalk);border-radius:22px;padding:30px 34px;transform:rotate(-.8deg);box-shadow:0 0 0 8px #6a4a2c,0 22px 40px -18px rgba(0,0,0,.5)}
+.slate ul{list-style:none;margin:0;padding:0}
+.slate li{font:500 clamp(1.5rem,4.4vw,2.05rem)/1.35 var(--hand);padding:9px 0;border-bottom:1px dashed rgba(238,240,230,.22)}
+.slate li:last-child{border:0;color:var(--gold)}
+.gal{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.gal figure{margin:0;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:var(--line)}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+@media (min-width:760px){.gal figure:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}}
+.band{background:var(--ink);color:var(--stone)}
+.band p{color:#d4d8cb}
+.rate{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.rate b{font:400 clamp(3.6rem,12vw,6rem)/1 var(--serif);color:var(--gold)}
+.rate span{color:var(--muted)}
+.quotes{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+blockquote{margin:0;padding:6px 0 6px 18px;border-left:3px solid var(--gold);font:400 1.2rem/1.45 var(--serif)}
+blockquote small{display:block;margin-top:8px;font:500 .9rem var(--sans);color:var(--muted)}
+form{display:grid;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+label{display:grid;gap:6px;font-weight:600;font-size:.95rem}
+input,select,textarea{font:inherit;font-size:16px;color:var(--text);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:12px;width:100%;min-height:48px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.radios{display:flex;gap:22px;flex-wrap:wrap}
+.radios label{display:flex;align-items:center;gap:8px;font-weight:500;min-height:44px}
+.radios input{width:auto;min-height:0}
+.err{color:var(--link);font-weight:600;min-height:1.3em}
+.result{display:none;background:var(--bg);border:1.5px dashed var(--muted);border-radius:14px;padding:16px;white-space:pre-wrap;word-break:break-word;transform-origin:top left;animation:pop 200ms ease-out}
+@keyframes pop{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:none}}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.acts .btn.ghost{color:var(--text)}
+.small{font-size:.9rem;color:var(--muted)}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px}
+.hours{margin:0;padding:0;list-style:none;font-variant-numeric:tabular-nums}
+.hours li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
+.hours li.today{font-weight:600;color:var(--link)}
+.hours em{font-style:normal;color:var(--muted)}
+footer{background:var(--ink);color:#c3c8ba;padding:44px 0;font-size:.92rem}
+footer a{color:var(--gold)}
+footer p{max-width:75ch}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{animation:none;opacity:1;transform:none}.btn,.result{transition:none;animation:none}}
 </style>
 </head>
 <body>
-<header><div class="wrap">
-<a class="logo" href="#top">🧺 O’ Panier Lucianais</a>
-<nav><a href="#produits">Produits</a><a href="#commander">Commander</a><a href="#infos">Infos</a></nav>
-</div></header>
-
-<main id="top">
-<div class="wrap">
-<div class="hero">
-<h1>Votre épicerie au cœur de Saint-Saturnin-de-Lucian</h1>
-<p>Des produits frais, des produits d’ici, des prix justes, et toujours un sourire en prime. L’épicerie du village, pour les habitants comme pour les visiteurs de passage.</p>
-<a class="btn" href="#commander">Commander en avance</a>
-<a class="btn alt" href="#infos">Nous trouver</a>
+<header class='hero' id='hero'>
+<svg class='land' viewBox='0 0 1200 640' preserveAspectRatio='xMidYMax slice' aria-hidden='true'><defs><linearGradient id='sky' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#1a2a20'/><stop offset='1' stop-color='#3b4e35'/></linearGradient><pattern id='vn' width='16' height='70' patternUnits='userSpaceOnUse' patternTransform='skewX(-26)'><rect width='5' height='70' fill='#8da055'/></pattern></defs><rect width='1200' height='640' fill='url(#sky)'/><circle cx='940' cy='170' r='52' fill='#d9a441' opacity='.92'/><path d='M0 380L170 300 320 345 520 210 650 280 830 240 1010 330 1200 290V640H0Z' fill='#243629'/><path d='M0 450Q300 395 620 435T1200 415V640H0Z' fill='#2f4530'/><path d='M0 505Q330 462 650 495T1200 480V640H0Z' fill='#3a5430'/><rect y='500' width='1200' height='140' fill='url(#vn)' opacity='.5'/></svg>
+<div class='shade'></div>
+<div class='in'>
+<div class='bar'><a class='mark' href='#hero'>O’ Panier Lucianais</a><nav><a href='#ardoise'>L’épicerie</a><a href='#commander'>Précommander</a><a href='#infos'>Horaires</a></nav></div>
+<h1 class='rv'>Au carrefour des sentiers, l’épicerie du village.</h1>
+<p class='lead rv d1'>Fruits et légumes de saison, charcuteries du coin et, l’été, des glaces. Sandy vous accueille au 4 avenue du Quai, au cœur de Saint-Saturnin-de-Lucian.</p>
+<div class='cta rv d2'><a class='btn' href='#commander'>Précommander</a><a class='btn ghost' href='tel:+33680916372'>Appeler le 06 80 91 63 72</a><span class='pill' id='st'><i class='dot'></i><span id='stt'>Voir les horaires</span></span></div>
 </div>
+</header>
 
-<section id="atouts"><div class="grid">
-<div class="card"><h3>Local d’abord</h3><p>Une sélection de produits locaux, pour bien manger et faire vivre le territoire.</p></div>
-<div class="card"><h3>Frais et abordable</h3><p>Des produits frais à des prix cohérents, pour remplir le panier sans se ruiner.</p></div>
-<div class="card"><h3>Un accueil qui compte</h3><p>Ici, on vous conseille et on prend le temps. Sandy vous reçoit avec le sourire.</p></div>
+<main>
+<section id='ardoise'><div class='wrap cols'>
+<div>
+<h2>Ce qu’on trouve ici</h2>
+<p>Une petite épicerie bien garnie, ouverte en avril 2024 sur la route des randonneurs. Les rayons suivent les saisons : on vient chercher de quoi cuisiner, composer un pique-nique ou rapporter un produit du pays.</p>
+<p>Les clients en parlent pour l’accueil, les prix raisonnables et le choix de produits locaux.</p>
+</div>
+<div class='slate' aria-label='Ardoise des produits'><ul>
+<li>Fruits et légumes de saison</li>
+<li>Charcuteries locales</li>
+<li>Produits du coin</li>
+<li>Glaces, dès les beaux jours</li>
+<li>Et ça change avec les saisons !</li>
+</ul></div>
 </div></section>
 
-<section id="apropos">
-<h2>L’épicerie du village</h2>
-<p>Au pied du Mont Saint-Baudille, entre vignes, oliviers et ruelles de pierre, Saint-Saturnin-de-Lucian garde son esprit de village. O’ Panier Lucianais en est le commerce du quotidien : on y passe chercher de quoi préparer le repas, un produit du coin à offrir, ou simplement dire bonjour.</p>
-<p>Vous habitez le village, vous séjournez dans un gîte des environs ou vous revenez d’une randonnée : la porte est ouverte.</p>
-</section>
+<section id='photos' hidden style='padding-top:0'><div class='wrap'><div class='gal' id='gal'></div></div></section>
 
-<section id="produits">
-<h2>Nos produits</h2>
-<div class="grid">
-<div class="card"><h3>Produits locaux</h3><p>Des produits de producteurs de la région, à découvrir en rayon.</p></div>
-<div class="card"><h3>Produits frais</h3><p>Une sélection de produits frais, renouvelée régulièrement.</p></div>
-<div class="card"><h3>Le quotidien</h3><p>Les indispensables pour dépanner, à des prix raisonnables.</p></div>
+<section class='band'><div class='wrap cols'>
+<div>
+<h2>Sur le chemin des randonneurs</h2>
+<p>Saint-Saturnin-de-Lucian est un carrefour de sentiers, entre vignes et garrigue. L’Oenorando® de 12 km part de la cave coopérative du village et grimpe jusqu’au rocher des Deux Vierges.</p>
+<p>Avant ou après la marche, passez remplir le sac à dos.</p>
 </div>
-</section>
+<div>
+<div class='rate'><b>4,9</b><span>sur 5 · 13 avis Google</span></div>
+<div class='quotes' style='grid-template-columns:1fr'>
+<blockquote>Très bon accueil !<small>Alyssia B.</small></blockquote>
+<blockquote>Superbe épicerie, produits frais et prix cohérents !<small>Clément G.</small></blockquote>
+<blockquote>Un accueil fort sympathique et souriant.<small>Philippe F.</small></blockquote>
+</div>
+</div>
+</div></section>
 
-<section id="avis">
-<h2>Ils en parlent</h2>
-<p><span class="stars">★★★★★</span> <strong>4,9 / 5</strong> sur Google (13 avis)</p>
-<div class="grid">
-<div class="card"><blockquote>« Très bon accueil ! »</blockquote><p class="small">Alyssia B.</p></div>
-<div class="card"><blockquote>« Superbe épicerie, produits frais et prix cohérents ! »</blockquote><p class="small">Clément G.</p></div>
+<section id='commander'><div class='wrap'>
+<h2>Précommander</h2>
+<p>Dites-nous ce qu’il vous faut, on prépare. Retrait et paiement en boutique, aucun paiement en ligne. Votre demande part par SMS ou par e-mail et n’est confirmée qu’après notre réponse.</p>
+<form id='f' novalidate autocomplete='on'>
+<div class='radios' role='radiogroup' aria-label='Type de demande'>
+<label><input type='radio' name='type' value='Commande' checked> Commander</label>
+<label><input type='radio' name='type' value='Réservation'> Réserver</label>
 </div>
-</section>
-
-<section id="commander">
-<h2>Commander ou réserver en avance</h2>
-<p>Préparez votre panier, on vous le garde. <strong>Retrait et paiement en boutique</strong>, aucun paiement en ligne. Votre demande part par SMS vers l’épicerie : elle n’est confirmée qu’après réponse de notre part.</p>
-<form id="f" novalidate autocomplete="on">
-<div class="radios" role="radiogroup" aria-label="Type de demande">
-<label><input type="radio" name="type" value="Commande" checked> Commander</label>
-<label><input type="radio" name="type" value="Réservation"> Réserver</label>
+<div class='row'>
+<label>Prénom<input id='nom' maxlength='40' required autocomplete='given-name'></label>
+<label>Téléphone<input id='tel' type='tel' maxlength='20' required autocomplete='tel' placeholder='06 12 34 56 78'></label>
 </div>
-<div class="row">
-<label>Prénom<input id="nom" maxlength="40" required autocomplete="given-name"></label>
-<label>Téléphone<input id="tel" type="tel" maxlength="20" required autocomplete="tel" placeholder="06 12 34 56 78"></label>
+<div class='row'>
+<label>Jour de retrait<input id='jour' type='date' required></label>
+<label>Créneau<select id='cren'><option value='m'>Matin (8 h – 12 h 30)</option><option value='a'>Après-midi (16 h – 19 h 30)</option></select></label>
 </div>
-<div class="row">
-<label>Jour de retrait<input id="jour" type="date" required></label>
-<label>Créneau<select id="cren"><option>Matin</option><option>Après-midi</option></select></label>
-</div>
-<label>Votre liste<textarea id="liste" rows="5" maxlength="600" required placeholder="Ex. : 1 pain, 6 œufs, 1 pot de miel…"></textarea></label>
-<div class="err" id="err" role="alert"></div>
-<div><button class="btn" id="go" type="submit">Préparer ma demande</button></div>
-<div class="result" id="res" aria-live="polite"></div>
-<div id="actions"></div>
+<label>Votre liste<textarea id='liste' rows='5' maxlength='600' required placeholder='Ex. : 1 kg de pommes, du saucisson, 6 œufs…'></textarea></label>
+<div class='err' id='err' role='alert'></div>
+<div><button class='btn' id='go' type='submit'>Préparer ma demande</button></div>
+<div class='result' id='res' aria-live='polite'></div>
+<div class='acts' id='actions'></div>
 </form>
-<p class="small">Pas de compte, aucune donnée enregistrée sur ce site : votre message est créé dans votre navigateur et envoyé depuis votre téléphone.</p>
-</section>
+<p class='small' style='margin-top:14px'>Aucun compte, aucune donnée enregistrée : le message est composé dans votre navigateur et envoyé depuis votre téléphone.</p>
+</div></section>
 
-<section id="infos">
-<h2>Infos pratiques</h2>
-<div class="grid">
-<div class="card"><h3>Adresse</h3><p>4 avenue du Quai<br>34725 Saint-Saturnin-de-Lucian</p><p><a href="https://www.google.com/maps/search/?api=1&amp;query=4+Av.+du+Quai+34725+Saint-Saturnin-de-Lucian" target="_blank" rel="noopener noreferrer">Itinéraire sur Google Maps</a></p></div>
-<div class="card"><h3>Téléphone</h3><p><a href="tel:+33680916372">06 80 91 63 72</a></p></div>
-<div class="card"><h3>Horaires</h3><p>Ouverture dès 8 h (mardi). Pour les horaires complets, appelez-nous.</p></div>
+<section id='infos' style='padding-top:0'><div class='wrap info'>
+<div>
+<h2>Venir nous voir</h2>
+<p><strong>4 avenue du Quai</strong><br>34725 Saint-Saturnin-de-Lucian</p>
+<p><a href='https://www.google.com/maps/search/?api=1&amp;query=4+Av.+du+Quai+34725+Saint-Saturnin-de-Lucian' target='_blank' rel='noopener noreferrer'>Itinéraire sur Google Maps</a></p>
+<p><a href='tel:+33680916372'>06 80 91 63 72</a><br><a href='mailto:opanierlucianais@gmail.com'>opanierlucianais@gmail.com</a><br><a href='https://www.facebook.com/people/O-Panier-Lucianais/61557655047059/' target='_blank' rel='noopener noreferrer'>Page Facebook</a></p>
 </div>
-</section>
+<div>
+<h2>Horaires</h2>
+<ul class='hours'>
+<li id='d1'><span>Lundi</span><em>Fermé</em></li>
+<li id='d2'><span>Mardi</span><span>8h–12h30 · 16h–19h30</span></li>
+<li id='d3'><span>Mercredi</span><span>8h–12h30 · 16h–19h30</span></li>
+<li id='d4'><span>Jeudi</span><span>8h–12h30 · 16h–19h30</span></li>
+<li id='d5'><span>Vendredi</span><span>8h–12h30 · 16h–19h30</span></li>
+<li id='d6'><span>Samedi</span><span>8h–12h30 · 16h–19h30</span></li>
+<li id='d0'><span>Dimanche</span><span>8h–12h30</span></li>
+</ul>
+<p class='small' style='margin-top:12px'>Les horaires peuvent varier les jours fériés : en cas de doute, un coup de fil.</p>
 </div>
+</div></section>
 </main>
 
-<footer><div class="wrap">
-<p>© O’ Panier Lucianais · 4 av. du Quai, 34725 Saint-Saturnin-de-Lucian · 06 80 91 63 72</p>
-<details><summary>Mentions légales</summary>
-<p>Éditeur : O’ Panier Lucianais – exploitant : [nom] – SIRET : [à renseigner]. Hébergement : [à renseigner]. Ce site ne dépose aucun cookie et ne collecte aucune donnée personnelle ; les demandes de commande sont envoyées par SMS depuis l’appareil du visiteur.</p></details>
+<footer><div class='wrap'>
+<p><strong>O’ Panier Lucianais</strong> · 4 avenue du Quai, 34725 Saint-Saturnin-de-Lucian · 06 80 91 63 72</p>
+<details><summary>Mentions légales et confidentialité</summary>
+<p>Éditeur : O’ Panier Lucianais, société à responsabilité limitée créée en 2024, 4 avenue du Quai, 34725 Saint-Saturnin-de-Lucian. SIRET : 984 613 729 00016. Directeur ou directrice de la publication : la gérance de la société. Hébergement : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis (GitHub Pages).</p>
+<p>Ce site ne dépose aucun cookie et n’enregistre aucune donnée. Les polices de caractères sont chargées depuis Google Fonts, ce qui transmet l’adresse IP du visiteur à Google. Les demandes de précommande sont composées dans votre navigateur et envoyées depuis votre propre téléphone ou messagerie.</p></details>
 </div></footer>
 
 <script>
 (function(){
-"use strict";
-var SHOP="+33680916372";
+'use strict';
 var $=function(i){return document.getElementById(i)};
-var f=$("f"),err=$("err"),res=$("res"),acts=$("actions"),go=$("go"),last=0;
-var d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());
-var today=d.toISOString().slice(0,10);
-$("jour").min=today;
-function clean(s,max){return String(s||"").replace(/[\u0000-\u001f\u007f<>]/g," ").replace(/\s+/g," ").trim().slice(0,max)}
-function fail(m){err.textContent=m;res.style.display="none";acts.textContent=""}
-f.addEventListener("submit",function(e){
+var DAYS=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+var AM=[480,750],PM=[960,1170];
+var H={0:[AM],1:[],2:[AM,PM],3:[AM,PM],4:[AM,PM],5:[AM,PM],6:[AM,PM]};
+function fmt(m){var h=Math.floor(m/60),n=m%60;return h+' h'+(n?' '+(n<10?'0':'')+n:'')}
+function paris(){var p={};new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Paris',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});return {d:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[p.weekday],m:(+p.hour)*60+(+p.minute)}}
+function status(n){var s=H[n.d],i;for(i=0;i<s.length;i++){if(n.m>=s[i][0]&&n.m<s[i][1])return {open:true,txt:'Ouvert · jusqu’à '+fmt(s[i][1])}}for(i=0;i<s.length;i++){if(n.m<s[i][0])return {open:false,txt:'Fermé · ouvre à '+fmt(s[i][0])}}for(i=1;i<=7;i++){var d=(n.d+i)%7;if(H[d].length)return {open:false,txt:'Fermé · ouvre '+(i===1?'demain':DAYS[d])+' à '+fmt(H[d][0][0])}}return null}
+try{var now=paris(),st=status(now);if(st){$('st').className='pill '+(st.open?'open':'closed');$('stt').textContent=st.txt}$('d'+now.d).className='today'}catch(e){}
+
+var PH=[['devanture.jpg','Devanture de l’épicerie, avenue du Quai'],['rayons.jpg','Les rayons de fruits et légumes'],['produits.jpg','Charcuteries et produits locaux'],['sandy.jpg','L’accueil au comptoir'],['village.jpg','Saint-Saturnin-de-Lucian et ses vignes']];
+PH.forEach(function(p){var im=new Image();im.onload=function(){var fg=document.createElement('figure');im.alt=p[1];fg.appendChild(im);$('gal').appendChild(fg);$('photos').hidden=false};im.src='photos/'+p[0]});
+var hi=new Image();hi.onload=function(){$('hero').style.backgroundImage='url(photos/hero.jpg)'};hi.src='photos/hero.jpg';
+
+var f=$('f'),err=$('err'),res=$('res'),acts=$('actions'),go=$('go'),last=0,NL=String.fromCharCode(10);
+var d0=new Date();d0.setMinutes(d0.getMinutes()-d0.getTimezoneOffset());
+var today=d0.toISOString().slice(0,10);$('jour').min=today;
+function clean(s,max){var o='',i,c,ch;s=String(s||'');for(i=0;i<s.length&&o.length<max*3;i++){c=s.charCodeAt(i);ch=s.charAt(i);if(ch==='<'||ch==='>')continue;o+=(c<32||c===127)?' ':ch}return o.split(' ').filter(Boolean).join(' ').slice(0,max)}
+function tel10(t){var o='',i;for(i=0;i<t.length;i++){if('0123456789+'.indexOf(t.charAt(i))>-1)o+=t.charAt(i)}if(o.indexOf('+33')===0)o='0'+o.slice(3);else if(o.indexOf('0033')===0)o='0'+o.slice(4);return /^0[1-9][0-9]{8}$/.test(o)?o:''}
+function fail(m){err.textContent=m;res.style.display='none';acts.textContent=''}
+f.addEventListener('submit',function(e){
  e.preventDefault();
- var now=Date.now();
- if(go.disabled||now-last<3000)return;
- var type=(f.elements.type.value==="Réservation")?"Réservation":"Commande";
- var nom=clean($("nom").value,40),tel=clean($("tel").value,20),jour=$("jour").value,
-     cren=($("cren").value==="Après-midi")?"Après-midi":"Matin",liste=clean($("liste").value,600);
- if(!nom)return fail("Indiquez votre prénom.");
- if(!/^(?:\+33|0033|0)[1-9](?:[ .-]?\d{2}){4}$/.test(tel))return fail("Numéro de téléphone français invalide.");
- if(!/^\d{4}-\d{2}-\d{2}$/.test(jour)||jour<today)return fail("Choisissez un jour valide.");
- if(liste.length<3)return fail("Indiquez votre liste.");
- err.textContent="";
- last=now;go.disabled=true;setTimeout(function(){go.disabled=false},4000);
- var p=jour.split("-"),jf=p[2]+"/"+p[1]+"/"+p[0];
- var msg=type+" O’ Panier Lucianais\nPrénom : "+nom+"\nTél : "+tel+"\nRetrait : "+jf+" ("+cren+")\nListe : "+liste;
- res.textContent=msg;res.style.display="block";
- acts.textContent="";
- var a=document.createElement("a");
- a.className="btn";a.textContent="Envoyer par SMS";
- a.href="sms:"+SHOP+"?&body="+encodeURIComponent(msg);
- var b=document.createElement("button");
- b.type="button";b.className="btn alt";b.textContent="Copier le message";
- b.addEventListener("click",function(){
-  try{navigator.clipboard.writeText(msg).then(function(){b.textContent="Copié ✓"},function(){b.textContent="Copiez le texte ci-dessus"})}
-  catch(x){b.textContent="Copiez le texte ci-dessus"}
- });
- acts.appendChild(a);acts.appendChild(b);
+ var t=Date.now();
+ if(go.disabled||t-last<3000)return;
+ var type=f.elements.type.value==='Réservation'?'Réservation':'Commande';
+ var nom=clean($('nom').value,40),tel=tel10(clean($('tel').value,20)),jour=$('jour').value,pm=$('cren').value==='a',liste=clean($('liste').value,600);
+ if(!nom)return fail('Indiquez votre prénom.');
+ if(!tel)return fail('Numéro de téléphone français invalide.');
+ if(!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(jour)||jour<today)return fail('Choisissez un jour valide.');
+ var wd=new Date(jour+'T12:00:00').getDay();
+ if(wd===1)return fail('L’épicerie est fermée le lundi.');
+ if(wd===0&&pm)return fail('Le dimanche, l’épicerie ouvre seulement le matin.');
+ if(liste.length<3)return fail('Indiquez votre liste.');
+ err.textContent='';last=t;go.disabled=true;setTimeout(function(){go.disabled=false},4000);
+ var p=jour.split('-'),tf=tel.replace(/(..)(?=.)/g,'$1 ');
+ var msg=type+' O’ Panier Lucianais'+NL+'Prénom : '+nom+NL+'Tél : '+tf+NL+'Retrait : '+p[2]+'/'+p[1]+'/'+p[0]+(pm?' (après-midi)':' (matin)')+NL+'Liste : '+liste;
+ res.textContent=msg;res.style.display='block';acts.textContent='';
+ var a=document.createElement('a');a.className='btn';a.textContent='Envoyer par SMS';a.href='sms:+33680916372?&body='+encodeURIComponent(msg);
+ var m=document.createElement('a');m.className='btn ghost';m.textContent='Envoyer par e-mail';m.href='mailto:opanierlucianais@gmail.com?subject='+encodeURIComponent(type+' – '+nom)+'&body='+encodeURIComponent(msg);
+ var b=document.createElement('button');b.type='button';b.className='btn ghost';b.textContent='Copier le message';
+ b.addEventListener('click',function(){try{navigator.clipboard.writeText(msg).then(function(){b.textContent='Copié ✓'},function(){b.textContent='Copiez le texte ci-dessus'})}catch(x){b.textContent='Copiez le texte ci-dessus'}});
+ acts.appendChild(a);acts.appendChild(m);acts.appendChild(b);
 });
 })();
 </script>
