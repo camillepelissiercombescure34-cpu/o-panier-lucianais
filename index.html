@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Épicerie de proximité à Saint-Saturnin-de-Lucian : produits locaux, produits frais, prix justes et accueil chaleureux. 4 av. du Quai.">
+<title>O’ Panier Lucianais – Épicerie de village à Saint-Saturnin-de-Lucian</title>
+<style>
+:root{--bg:#f4f3ee;--surface:#fff;--text:#262824;--muted:#64675d;--brand:#3f6b3a;--brand-text:#fff;--accent:#7a2b3f;--line:#dedcd2;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1d19;--surface:#262923;--text:#f1eee6;--muted:#a9a69b;--brand:#8fc085;--brand-text:#13200f;--accent:#e0a0b1;--line:#3a3d35;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1b1d19;--surface:#262923;--text:#f1eee6;--muted:#a9a69b;--brand:#8fc085;--brand-text:#13200f;--accent:#e0a0b1;--line:#3a3d35;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 Georgia,"Times New Roman",serif}
+h1,h2,h3,.btn,label,nav{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.logo{font:700 1.15rem system-ui,sans-serif;color:var(--brand);text-decoration:none}
+nav a{margin-left:16px;color:var(--text);text-decoration:none;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin:0 0 16px}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:620px;margin:0 0 24px}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-text);border:0;border-radius:999px;padding:12px 22px;font-size:1rem;font-weight:600;text-decoration:none;cursor:pointer;margin:0 8px 8px 0}
+.btn.alt{background:transparent;color:var(--text);border:2px solid var(--line)}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.btn{min-height:44px;line-height:1.3;transition:transform 150ms ease-out,opacity 150ms ease-out}
+.btn:active:not([disabled]){transform:scale(.97)}
+nav a{display:inline-block;padding:11px 6px}
+section>p{max-width:65ch}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+@keyframes pop{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.result{animation:pop 200ms ease-out;transform-origin:top left}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.result{transition:none;animation:none}}
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{font-size:1.6rem;margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{margin:0 0 6px;font-size:1.05rem;color:var(--brand)}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+blockquote{margin:0}
+.stars{color:var(--accent);font:700 1.1rem system-ui,sans-serif}
+form{display:grid;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+label{display:grid;gap:4px;font-size:.92rem;font-weight:600}
+input,select,textarea{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px;width:100%}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.radios{display:flex;gap:18px;flex-wrap:wrap;font-family:system-ui,sans-serif}
+.radios label{display:flex;align-items:center;gap:6px;font-weight:500}
+.radios input{width:auto}
+.err{color:var(--accent);font:600 .9rem system-ui,sans-serif;min-height:1.2em}
+.result{display:none;background:var(--bg);border:1px dashed var(--brand);border-radius:12px;padding:14px;white-space:pre-wrap;word-break:break-word}
+.small{font-size:.88rem;color:var(--muted)}
+footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#top">🧺 O’ Panier Lucianais</a>
+<nav><a href="#produits">Produits</a><a href="#commander">Commander</a><a href="#infos">Infos</a></nav>
+</div></header>
+
+<main id="top">
+<div class="wrap">
+<div class="hero">
+<h1>Votre épicerie au cœur de Saint-Saturnin-de-Lucian</h1>
+<p>Des produits frais, des produits d’ici, des prix justes, et toujours un sourire en prime. L’épicerie du village, pour les habitants comme pour les visiteurs de passage.</p>
+<a class="btn" href="#commander">Commander en avance</a>
+<a class="btn alt" href="#infos">Nous trouver</a>
+</div>
+
+<section id="atouts"><div class="grid">
+<div class="card"><h3>Local d’abord</h3><p>Une sélection de produits locaux, pour bien manger et faire vivre le territoire.</p></div>
+<div class="card"><h3>Frais et abordable</h3><p>Des produits frais à des prix cohérents, pour remplir le panier sans se ruiner.</p></div>
+<div class="card"><h3>Un accueil qui compte</h3><p>Ici, on vous conseille et on prend le temps. Sandy vous reçoit avec le sourire.</p></div>
+</div></section>
+
+<section id="apropos">
+<h2>L’épicerie du village</h2>
+<p>Au pied du Mont Saint-Baudille, entre vignes, oliviers et ruelles de pierre, Saint-Saturnin-de-Lucian garde son esprit de village. O’ Panier Lucianais en est le commerce du quotidien : on y passe chercher de quoi préparer le repas, un produit du coin à offrir, ou simplement dire bonjour.</p>
+<p>Vous habitez le village, vous séjournez dans un gîte des environs ou vous revenez d’une randonnée : la porte est ouverte.</p>
+</section>
+
+<section id="produits">
+<h2>Nos produits</h2>
+<div class="grid">
+<div class="card"><h3>Produits locaux</h3><p>Des produits de producteurs de la région, à découvrir en rayon.</p></div>
+<div class="card"><h3>Produits frais</h3><p>Une sélection de produits frais, renouvelée régulièrement.</p></div>
+<div class="card"><h3>Le quotidien</h3><p>Les indispensables pour dépanner, à des prix raisonnables.</p></div>
+</div>
+</section>
+
+<section id="avis">
+<h2>Ils en parlent</h2>
+<p><span class="stars">★★★★★</span> <strong>4,9 / 5</strong> sur Google (13 avis)</p>
+<div class="grid">
+<div class="card"><blockquote>« Très bon accueil ! »</blockquote><p class="small">Alyssia B.</p></div>
+<div class="card"><blockquote>« Superbe épicerie, produits frais et prix cohérents ! »</blockquote><p class="small">Clément G.</p></div>
+</div>
+</section>
+
+<section id="commander">
+<h2>Commander ou réserver en avance</h2>
+<p>Préparez votre panier, on vous le garde. <strong>Retrait et paiement en boutique</strong>, aucun paiement en ligne. Votre demande part par SMS vers l’épicerie : elle n’est confirmée qu’après réponse de notre part.</p>
+<form id="f" novalidate autocomplete="on">
+<div class="radios" role="radiogroup" aria-label="Type de demande">
+<label><input type="radio" name="type" value="Commande" checked> Commander</label>
+<label><input type="radio" name="type" value="Réservation"> Réserver</label>
+</div>
+<div class="row">
+<label>Prénom<input id="nom" maxlength="40" required autocomplete="given-name"></label>
+<label>Téléphone<input id="tel" type="tel" maxlength="20" required autocomplete="tel" placeholder="06 12 34 56 78"></label>
+</div>
+<div class="row">
+<label>Jour de retrait<input id="jour" type="date" required></label>
+<label>Créneau<select id="cren"><option>Matin</option><option>Après-midi</option></select></label>
+</div>
+<label>Votre liste<textarea id="liste" rows="5" maxlength="600" required placeholder="Ex. : 1 pain, 6 œufs, 1 pot de miel…"></textarea></label>
+<div class="err" id="err" role="alert"></div>
+<div><button class="btn" id="go" type="submit">Préparer ma demande</button></div>
+<div class="result" id="res" aria-live="polite"></div>
+<div id="actions"></div>
+</form>
+<p class="small">Pas de compte, aucune donnée enregistrée sur ce site : votre message est créé dans votre navigateur et envoyé depuis votre téléphone.</p>
+</section>
+
+<section id="infos">
+<h2>Infos pratiques</h2>
+<div class="grid">
+<div class="card"><h3>Adresse</h3><p>4 avenue du Quai<br>34725 Saint-Saturnin-de-Lucian</p><p><a href="https://www.google.com/maps/search/?api=1&amp;query=4+Av.+du+Quai+34725+Saint-Saturnin-de-Lucian" target="_blank" rel="noopener noreferrer">Itinéraire sur Google Maps</a></p></div>
+<div class="card"><h3>Téléphone</h3><p><a href="tel:+33680916372">06 80 91 63 72</a></p></div>
+<div class="card"><h3>Horaires</h3><p>Ouverture dès 8 h (mardi). Pour les horaires complets, appelez-nous.</p></div>
+</div>
+</section>
+</div>
+</main>
+
+<footer><div class="wrap">
+<p>© O’ Panier Lucianais · 4 av. du Quai, 34725 Saint-Saturnin-de-Lucian · 06 80 91 63 72</p>
+<details><summary>Mentions légales</summary>
+<p>Éditeur : O’ Panier Lucianais – exploitant : [nom] – SIRET : [à renseigner]. Hébergement : [à renseigner]. Ce site ne dépose aucun cookie et ne collecte aucune donnée personnelle ; les demandes de commande sont envoyées par SMS depuis l’appareil du visiteur.</p></details>
+</div></footer>
+
+<script>
+(function(){
+"use strict";
+var SHOP="+33680916372";
+var $=function(i){return document.getElementById(i)};
+var f=$("f"),err=$("err"),res=$("res"),acts=$("actions"),go=$("go"),last=0;
+var d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());
+var today=d.toISOString().slice(0,10);
+$("jour").min=today;
+function clean(s,max){return String(s||"").replace(/[\u0000-\u001f\u007f<>]/g," ").replace(/\s+/g," ").trim().slice(0,max)}
+function fail(m){err.textContent=m;res.style.display="none";acts.textContent=""}
+f.addEventListener("submit",function(e){
+ e.preventDefault();
+ var now=Date.now();
+ if(go.disabled||now-last<3000)return;
+ var type=(f.elements.type.value==="Réservation")?"Réservation":"Commande";
+ var nom=clean($("nom").value,40),tel=clean($("tel").value,20),jour=$("jour").value,
+     cren=($("cren").value==="Après-midi")?"Après-midi":"Matin",liste=clean($("liste").value,600);
+ if(!nom)return fail("Indiquez votre prénom.");
+ if(!/^(?:\+33|0033|0)[1-9](?:[ .-]?\d{2}){4}$/.test(tel))return fail("Numéro de téléphone français invalide.");
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(jour)||jour<today)return fail("Choisissez un jour valide.");
+ if(liste.length<3)return fail("Indiquez votre liste.");
+ err.textContent="";
+ last=now;go.disabled=true;setTimeout(function(){go.disabled=false},4000);
+ var p=jour.split("-"),jf=p[2]+"/"+p[1]+"/"+p[0];
+ var msg=type+" O’ Panier Lucianais\nPrénom : "+nom+"\nTél : "+tel+"\nRetrait : "+jf+" ("+cren+")\nListe : "+liste;
+ res.textContent=msg;res.style.display="block";
+ acts.textContent="";
+ var a=document.createElement("a");
+ a.className="btn";a.textContent="Envoyer par SMS";
+ a.href="sms:"+SHOP+"?&body="+encodeURIComponent(msg);
+ var b=document.createElement("button");
+ b.type="button";b.className="btn alt";b.textContent="Copier le message";
+ b.addEventListener("click",function(){
+  try{navigator.clipboard.writeText(msg).then(function(){b.textContent="Copié ✓"},function(){b.textContent="Copiez le texte ci-dessus"})}
+  catch(x){b.textContent="Copiez le texte ci-dessus"}
+ });
+ acts.appendChild(a);acts.appendChild(b);
+});
+})();
+</script>
+</body>
+</html>
